@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>8B—STUDIO · Collectible figure studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@500;700;900&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page" id="root">
+
+  <!-- Floating figure that travels from the hero slot to the featured slot -->
+  <div class="flyer" id="flyer">
+    <video id="video" muted loop playsinline preload="auto"></video>
+    <canvas id="canvas" width="560" height="560"></canvas>
+  </div>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#top" class="logo">8B—STUDIO</a>
+      <div class="nav-links">
+        <a href="#work">Work</a><a href="#studio">Studio</a><a href="#process">Process</a><a href="#clients">Clients</a><a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#contact" class="btn-cta"><span class="cta-long">Commission a figure</span><span class="cta-short">Commission</span></a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">≡</button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#work">Work</a><a href="#studio">Studio</a><a href="#process">Process</a><a href="#clients">Clients</a><a href="#faq">FAQ</a>
+    </div>
+  </header>
+
+  <section id="top" class="hero">
+    <div data-reveal class="hero-meta mono">
+      <span>Collectible figure studio</span><span>Est. 2021 — Seoul</span>
+    </div>
+    <div class="hero-title">
+      <div class="clip"><h1 data-reveal class="display">You, in</h1></div>
+      <div class="hero-slot" id="heroSlot"></div>
+      <div class="clip front"><h1 data-reveal class="display">Miniature</h1></div>
+    </div>
+    <div data-reveal class="hero-tag">
+      <span class="dash"></span>
+      <span class="mono">Sculpted. Printed. Hand-painted.</span>
+      <span class="dash"></span>
+    </div>
+  </section>
+
+  <section class="wrap caps-section">
+    <div data-reveal class="caps-box">
+      <div class="marquee" id="marquee"></div>
+    </div>
+  </section>
+
+  <section id="work" class="wrap featured">
+    <div class="feat-grid">
+      <div data-reveal class="feat-col feat-left">
+        <div>
+          <div class="muted-14">Featured piece — No. 047</div>
+          <h2 class="feat-title">The<br>Developer</h2>
+          <div class="fs-14">1:8 scale · 28 cm with base</div>
+        </div>
+        <div>
+          <div class="label">Materials</div>
+          <div class="fs-14 body-text">8K photopolymer resin, acrylic paint, matte UV coat, turned walnut-tone base</div>
+        </div>
+      </div>
+      <div class="spec-slot" id="specSlot">
+        <div class="spec-hint mono">Drag to rotate</div>
+        <div class="spec-angle mono" id="angle">000°</div>
+        <div class="spec-track"><div class="spec-bar" id="angleBar"></div></div>
+      </div>
+      <div data-reveal class="feat-col">
+        <div>
+          <div class="label">About the piece</div>
+          <p class="about-piece">A birthday commission for a software lead, built from twelve reference photos. Every detail came from her own desk — the code on the monitor, the drawer unit, the grey runners she wears every day. Sculpted in 34 hours, painted by hand over four days.</p>
+        </div>
+        <div class="btn-row">
+          <button class="btn-primary" id="playBtn">Rotate figure</button>
+          <a href="#contact" class="btn-outline">Order one like this</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="studio" class="about" data-about>
+    <div class="about-inner">
+      <div data-reveal class="about-kicker">About 8B-Studio</div>
+      <h2 class="about-words" id="aboutWords"></h2>
+      <p data-reveal class="about-copy">8B-Studio is a small team of sculptors, painters and print technicians. We make one-of-one collectible figures of real people — founders, families, teams, partners — capturing the posture, the outfit and the small habits that make someone recognisable at a glance.</p>
+      <div data-reveal-stagger class="stats">
+        <div class="stat"><div class="stat-num"><span data-count="640">0</span>+</div><div class="stat-label">Figures delivered</div></div>
+        <div class="stat"><div class="stat-num">0.025<span class="unit">mm</span></div><div class="stat-label">Print layer height</div></div>
+        <div class="stat"><div class="stat-num">4–6<span class="unit">wk</span></div><div class="stat-label">Typical lead time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap gallery">
+    <div data-reveal class="section-head">
+      <h2 class="h2">Selected work</h2>
+      <span class="mono muted">2021 — 2026</span>
+    </div>
+    <div class="gallery-grid">
+      <div data-reveal class="img-card tall"><img class="zoom" src="https://images.unsplash.com/photo-1612380318869-7925b91da6ba?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Hand-painted figure on a wooden table" loading="lazy"></div>
+      <div class="gallery-side">
+        <div data-reveal class="gallery-row">
+          <div class="img-card min180"><img class="zoom" src="https://images.unsplash.com/photo-1702138129409-7b4ff859ae5d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Close-up of figure detail" loading="lazy"></div>
+          <a href="#process" class="arrow-card"><span>→</span></a>
+        </div>
+        <div data-reveal class="panel promo">
+          <div>Send a photo,<br><span class="accent">Get a figure</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="wrap process">
+    <h2 data-reveal class="h2 center mb28">How a figure is made</h2>
+    <div data-reveal-stagger class="steps" id="steps"></div>
+  </section>
+
+  <section id="clients" class="wrap clients">
+    <h2 data-reveal class="h2 center balance clients-title">Kept on desks, shelves and mantels</h2>
+    <div data-reveal class="carousel" id="carousel">
+      <div class="track" id="track"></div>
+    </div>
+    <div class="carousel-nav">
+      <button class="sq-btn" id="prevQ" aria-label="Previous">←</button>
+      <button class="sq-btn" id="nextQ" aria-label="Next">→</button>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div data-reveal-stagger class="strip-grid">
+      <div class="img-card tall"><img class="zoom" src="https://images.unsplash.com/photo-1778268853895-ff829591ebf1?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Collection of miniature figures" loading="lazy"></div>
+      <div class="img-card tall"><img class="zoom" src="https://images.unsplash.com/photo-1625470496744-a01bf36a262f?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Three painted figures" loading="lazy"></div>
+      <div class="img-card tall"><img class="zoom" src="https://images.unsplash.com/photo-1606663889134-b1dedb5ed8b7?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Figure close-up" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section id="faq" class="wrap faq">
+    <h2 data-reveal class="h2 center faq-title">Frequently asked<br>questions</h2>
+    <div data-reveal-stagger class="faq-list" id="faqList"></div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="footer-inner">
+      <div data-reveal class="footer-top">
+        <div>
+          <div class="muted-14">Start a commission</div>
+          <a href="mailto:hello@8b-studio.com" class="email">hello@8b-studio.com</a>
+        </div>
+        <div class="socials"><a href="#">Instagram</a><a href="#">Behance</a><a href="#">YouTube</a></div>
+      </div>
+      <div class="wordmark" id="wordBox">
+        <span id="wordInner" data-reveal-stagger data-stagger-step="60"></span>
+      </div>
+      <div class="footer-bottom mono">
+        <span>© 2026 8B-Studio</span><span>Seoul, KR</span>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
